@@ -70,9 +70,9 @@ gulp.task( "deploy", () => {
         password: 'L8LtwdQOFKo',
         parallel: 10,
     } );
-    return gulp.src( "./dist/", { base: '.', buffer: false } )
-        .pipe( conn.newer( '/public_html/Portfolio002' ) ) 
-        .pipe( conn.dest( '/public_html/Portfolio002' ) );
+    return gulp.src( ['dist/**/*.*'], { base: '.', buffer: false } )
+        .pipe( conn.newer( '/htdocs/Portfolio002' ) ) 
+        .pipe( conn.dest( '/htdocs/Portfolio002' ) );
  
 } );
 
@@ -81,4 +81,9 @@ gulp.task("watch", () => {
     gulp.watch(["stage/css/**/*.css", "stage/css/**/*.scss"],gulp.series("css"));
     gulp.watch("stage/js/**/*.js", gulp.series("js"));
     gulp.watch("stage/images/**/*", gulp.series("img"));
+    gulp.watch("stage/**/*.*", gulp.series("deploy"));
 });
+
+gulp.task('default' ,()=>{
+    gulp.run("watch")
+})
