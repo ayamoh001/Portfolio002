@@ -1,0 +1,17 @@
+section.contact 
+    .cont
+        h2 Contact 
+        div 
+            div.links
+                a: img(src="./assests/images/contact/twitter.png", alt="twitter")
+                a: img(src="./assests/images/contact/behance.png", alt="behance")
+                a: img(src="./assests/images/contact/facebook.png", alt="facebook")
+                a: img(src="./assests/images/contact/whatsapp.png", alt="whatsapp")
+                a: img(src="./assests/images/contact/telegram.png", alt="telegram")
+                a: img(src="./assests/images/contact/pentrist.png", alt="pentrist")
+            div.form
+                form(action="./assests/php/form.php", method="POST")
+                    input(type="text" name="name" placeholder="Your Name:") 
+                    input(type="email" name="email" placeholder="Your Email:") 
+                    textarea(name="message" placeholder="Your Message:")
+                    input(type="submit", value="SEND" name="btn")

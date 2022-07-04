@@ -1,0 +1,136 @@
+.blog{
+    background-color: $second-color;
+    width: 100%;
+    .cont{
+        max-width: $max-width;
+        width: 100%;
+        margin: 0 auto;
+        padding: 60px 0;
+        .head{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            color: $main-color;
+            margin-bottom: 20px;
+            h3{
+                font-size: 24px;
+            }
+            h4{
+
+                a{
+                    color: $main-color;
+                    transition: .3s;
+                    &:hover{
+                        color: $third-color;
+                    }
+                }
+            }
+        }
+        .body{
+            display: flex;
+            gap:20px;
+            height: 500px;
+            .one{
+                flex: 2;
+                & > div{
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                    .img{
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-color: $main-color;
+                            opacity: .4;
+                            height: 100%;
+                            width: 100%;
+                            transition: 1s;
+                        }
+                        &:hover::after{
+                            opacity: 0;
+                        }
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                        }
+                        
+                        
+                    }
+                    .text{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        padding: 40px;
+                        h2{
+                            font-size: 45px;
+                            color: $second-color;
+                            margin-bottom: 10px;
+                        }
+                        p{
+                            font-size: 22px;
+                            line-height: 30px;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+            .two{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                & > div{
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                    .img{
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-color: $main-color;
+                            opacity: .4;
+                            height: 100%;
+                            width: 100%;
+                            transition: 1s;
+                        }
+                        &:hover::after{
+                            opacity: 0;
+                        }
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                        }
+                        
+                    }
+                    .text{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        padding: 20px;
+                        h2{
+                            font-size: 22px;
+                            color: $second-color;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

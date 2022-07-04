@@ -1,0 +1,92 @@
+header{
+    background-color: $second-color;
+    width: 100%;
+    .cont{
+        width: 100%;
+        max-width: $max-width;
+        margin: 0 auto;
+        height: 80px;
+        
+        display: flex;
+        color: $third-color;
+        align-items: center;
+        justify-content: space-between;
+        h1{
+            color: $main-color;
+            margin-right: 50px;
+            span{
+                color: $third-color;
+            }
+        }
+        div{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ul{
+                list-style: none;
+                display: flex;
+                %hover{
+                    
+                    
+                }
+                li{
+                    margin-right: 30px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    font-size: 12px;
+                    transition: 1s;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        transition: 1s;
+                        opacity: 0;
+                        bottom: -7px;
+                        left: 30%;
+                        width: 20px;
+                        height: 5px;
+                        border-radius: 5px;
+                        background-color: $main-color;
+                        
+                    }
+                    &:hover{
+                        color: $main-color;
+                        position: relative; 
+                    }
+                    &:hover::after{
+                        opacity: 1;
+                    }
+                }
+                .active{
+                    color: $main-color;
+                    position: relative; 
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        bottom: -7px;
+                        left: 30%;
+                        width: 20px;
+                        height: 5px;
+                        border-radius: 5px;
+                        background-color: $main-color;
+                        
+                    }
+                }
+            }
+            button{
+                padding: 10px 30px;
+                color:$second-color;
+                background-color: $main-color;
+                border-radius: 5px;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+                &:hover{
+                    border: 2px solid $main-color;
+                    background-color: $second-color;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}

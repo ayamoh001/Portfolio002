@@ -1,0 +1,12 @@
+section.features 
+    .cont
+        h2 What is special?
+        div.container
+            each val in [["UI/UX","Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur","feature.png"],["SEO","Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur","feature.png"],["Speed","Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur","feature.png"],["Responsive","Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur","feature.png"],["Comptability","Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur","feature.png"],["Reviews","Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur","feature.png"],["Languages","Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur","feature.png"],["UI/UX","Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur","feature.png"],["UI/UX","Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur","feature.png"]]
+                div.feature
+                    div.pic
+                        img(src="./assests/images/features/"+val[2] alt="")
+                    div.text
+                        h4 #{val[0]}
+                        p #{val[1]}
+

@@ -1,0 +1,77 @@
+.contact{
+    width: 100%;
+    background-color: $second-color;
+    .cont{
+        width: 100%;
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 60px 0;
+        h2{
+            text-align: center;
+            font-size: 40px;
+            color: $main-color;
+            margin-bottom: 40px;
+        }
+        & > div{
+            display: flex;
+            align-items: center;
+            .form{
+                width: 100%;
+                form{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    input,textarea{
+                        background-color: $third-color;
+                        color: $second-color;
+                        border: none;
+                        border-radius: 5px;
+                        padding: 20px;
+                        height: 60px;
+                        font-size: 16px;
+                        &[type = "submit"]{
+                            background-color: $main-color;
+                            color: $second-color;
+                            border: none;
+                            border-radius: 5px;
+                            font-weight: bold;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: $second-color;
+                                color:$main-color ; 
+                                outline: 1px solid $main-color;
+                            }
+                        }
+                    }
+                    textarea{
+                        height: 150px;
+                    }
+                }
+            }
+            .links{
+                width: 60%;
+                display: grid;
+                position: relative;
+                grid-template-columns: 100px 100px;
+                gap: 30px;
+                a{
+                    height: 100px;
+                    width: 100px;
+                    img{
+                        width: 100%;
+
+                    }
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 2px;
+                    background-color: $third-color;
+                    right: 20%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.landing{
+    background-color: $second-color;
+    width: 100%;
+    .cont{
+        width: 100%;
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 60px 0;
+        display: flex;
+        gap: 70px;
+        color: $third-color;
+        article{
+            width: 50%;
+        }
+        h1{
+            font-size: 60px;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 60px;
+            span{
+                color: $main-color;
+            }
+        }
+        p{
+            letter-spacing: 1px;
+            margin: 15px 0;
+            font-size: 16px;
+            line-height: 26px;
+        }
+        button{
+            border: none;
+            border-radius: 5px;
+            padding: 10px 40px;
+            font-weight: 800;
+            cursor: pointer;
+            &:nth-of-type(1){
+                background-color: $main-color;
+                color: $second-color;
+                border: none;
+                margin-right: 15px;
+                &:hover{
+                    background-color: $second-color;
+                    color:$main-color ;
+                    outline: 1px solid $main-color;
+                }
+            }
+            &:nth-of-type(2){
+                background-color: $second-color;
+                color: $main-color;
+                outline: 1px solid $main-color;
+                &:hover{
+                    background-color: $main-color;
+                    color: $second-color;
+                    outline: none;
+                }
+            }
+        }
+
+        figure{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

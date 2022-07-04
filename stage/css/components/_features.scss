@@ -1,0 +1,52 @@
+.features{
+    background-color: $second-color;
+    width: 100%;
+    .cont{
+        width: 100%;
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 60px 0;
+        h2{
+            text-align: center;
+            font-size: 50px;
+            color: $main-color;
+            margin-bottom: 50px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 40px;
+            .feature{
+                display: flex;
+                gap:25px;
+                .pic{
+                    background-color: $main-color;
+                    height: 100px;
+                    width: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    flex-shrink: 0;
+
+                    img{
+
+                    }
+                }
+                .text{
+                    h4{
+                        color: $main-color;
+                        font-size: 26px;
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        color: $third-color;
+                        font-size: 14px;
+                        line-height: 21px;
+                    }
+                }
+            }
+        }
+    }
+}

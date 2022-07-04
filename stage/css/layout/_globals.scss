@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+$main-color: #1CAADF;
+$second-color: #2C2F30;
+$third-color: #edefec;
+
+$max-width: 1070px;
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: $second-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $main-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
