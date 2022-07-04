@@ -83,7 +83,3 @@ gulp.task("watch", () => {
     gulp.watch("stage/images/**/*", gulp.series("img"));
     gulp.watch("stage/**/*.*", gulp.series("deploy"));
 });
-
-gulp.task('default' ,()=>{
-    gulp.run("watch")
-})
