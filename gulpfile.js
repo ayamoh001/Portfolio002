@@ -16,7 +16,8 @@ import cssnano from "gulp-cssnano";
 import uncss from "gulp-uncss";
 import concat from "gulp-concat";
 import ftp from 'vinyl-ftp';
-import zip from "gulp-zip"
+import zip from "gulp-zip";
+// import connect from "gulp-livereload";
 
 gulp.task("templates", () => {
     return gulp
@@ -56,6 +57,8 @@ gulp.task("img", () => {
         .pipe(gulp.dest("dist/assests/images"));
 });
 
+
+
 gulp.task("zip", () => {
     return gulp.src("dist")
         .pipe(zip("dist.zip"))  
@@ -63,7 +66,7 @@ gulp.task("zip", () => {
 });
 
  
-gulp.task( "deploy", () => {
+gulp.task("deploy", () => {
     var conn = ftp.create( {
         host:     'ftpupload.net',
         user:     'epiz_32071626',
@@ -80,6 +83,8 @@ gulp.task("watch", () => {
     gulp.watch("stage/html/**/*.pug", gulp.series("templates"));
     gulp.watch(["stage/css/**/*.css", "stage/css/**/*.scss"],gulp.series("css"));
     gulp.watch("stage/js/**/*.js", gulp.series("js"));
-    gulp.watch("stage/images/**/*", gulp.series("img"));
-    gulp.watch("stage/**/*.*", gulp.series("deploy"));
+    gulp.watch("stage/images/**/*.*", gulp.series("img"));
+    // gulp.watch("stage/**/*.*", gulp.series("deploy"));
 });
+
+gulp.task('default', gulp.series('watch'));

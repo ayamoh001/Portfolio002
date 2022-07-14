@@ -3,8 +3,8 @@ footer{
     width: 100%;
     .cont{
         width: 100%;
-        max-width: $max-width;
         margin: 0 auto;
+        padding: 0;
         color: $third-color;
         width: 100%;
         font-size: 14px;
@@ -63,4 +63,30 @@ footer{
             border-top: 1px solid $third-color;
         }
     }
+    
+    @media(max-width:$md) {
+        .cont .top{
+            gap: 30px;
+            flex-direction: column;
+            align-items: center;
+            .info{
+                width: 100%;
+                text-align: center;
+            }
+            .sec1, .sec2, .sec3{
+                display: flex;
+                flex-direction: column ;
+                align-items: center;
+                ul{
+                    text-align: center;
+                }
+                &::before{
+                    display: none;
+                }
+
+            }
+        }
+    }
+    
+    
 }

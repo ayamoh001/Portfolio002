@@ -1,41 +1,27 @@
 .about{
     width: 100%;
-    background-color: $second-color;
     .cont{
-        max-width: $max-width;
-        width: 100%;
-        margin: 0 auto;
-        padding: 60px  0;
-        h2{
-            color: $main-color;
-            text-align: center;
-            font-size: 40px;
-            margin-bottom: 40px;
-        }
-        article{
+            figure{
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 50px;
-            figure{
-
                 img{
-
+                    width:100%;
                 }
-            }
-            div{
-
-                p{
+            
+                figcaption{
                     color: $third-color;
                     line-height: 35px;
                     font-size: 24px;
-                    margin-bottom: 20px;
+                    
                     text-align: justify;
                 }
                 button{
                     color: $main-color;
                     background-color: $second-color;
                     outline: 1px solid $main-color;
+                    margin-top: 20px;
                     font-weight: bold;
                     border: none;
                     font-size: 18px;
@@ -48,6 +34,14 @@
                         outline-color: $second-color;
                     }
                 }
+        }
+    }
+    
+    @media(max-width:$md) {
+        .cont figure{
+            flex-direction: column;
+            figcaption button{
+                width: 100%;
             }
         }
     }

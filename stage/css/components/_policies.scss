@@ -1,17 +1,7 @@
 .policies{
-    background-color: $second-color;
     width: 100%;
     .cont{
-        max-width: $max-width;
-        width:100%;
-        margin: 0 auto;
-        padding: 60px 0;
-        h2{
-            color: $main-color;
-            font-size: 40px;
-            margin-bottom: 40px;
-            text-align: center;
-        }
+        
         &>div{
             display: flex;
             flex-direction: row;
@@ -55,6 +45,19 @@
                         border-radius: 50%;
                     }
                 }
+            }
+        }
+    }
+    @media (max-width:$md) {
+        .cont > div{
+            flex-direction: column;
+            .text{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h3,p{text-align: center;}
+                
             }
         }
     }

@@ -1,41 +1,13 @@
 .portfolio{
-    background-color: $second-color;
     width: 100%;
     .cont{
-        width: 100%;
-        max-width: $max-width;
-        margin: 0 auto;
-        padding: 60px 0;
-        h2{
-            color: $main-color;
-            font-size: 40px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
+        
         .slider{
             position: relative;
-            padding: 0 10%;
             .pics{ 
                 width: 100%;
                 img{
                     width: 100%;
-                }
-                button{
-                    position: absolute;
-                    height: 50px;
-                    width: 50px;
-                    top: 50%;
-                    color: $main-color;
-                    background-color: rgba(0,0,0,0);
-                    border: none;
-                    font-size: 20px;
-                    font-weight: 900;
-                    &.prev{
-                        left: 0;
-                    }
-                    &.next{
-                        right: 0;
-                    }
                 }
                 
             }
@@ -43,6 +15,7 @@
                 width: 100%;
                 display: flex;
                 overflow-x: scroll;
+                padding: 5px 2px;
                 &::-webkit-scrollbar {
                     height: 10px;
                 }
@@ -56,7 +29,22 @@
                 }
                 img{
                     width: 18%;
+                    height: 100%;
+                    cursor: pointer;
+                    &.active{
+                        outline: 2px solid white;
+                        z-index: 1000;
+                    }
                 }
+                
+            }
+        }
+    }
+    @media (max-width:$sm){
+        .cont .slider .btns{
+            height: 70px;
+            img{
+                width: 100%;
             }
         }
     }

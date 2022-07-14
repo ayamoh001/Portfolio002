@@ -1,20 +1,11 @@
 .contact{
     width: 100%;
-    background-color: $second-color;
     .cont{
-        width: 100%;
-        max-width: $max-width;
-        margin: 0 auto;
-        padding: 60px 0;
-        h2{
-            text-align: center;
-            font-size: 40px;
-            color: $main-color;
-            margin-bottom: 40px;
-        }
+        
         & > div{
             display: flex;
             align-items: center;
+            gap: 40px;
             .form{
                 width: 100%;
                 form{
@@ -49,8 +40,13 @@
                     }
                 }
             }
+            .line{
+                width: 2px;
+                height: 300px;
+                background-color: $third-color;
+            }
             .links{
-                width: 60%;
+                width: fit-content;
                 display: grid;
                 position: relative;
                 grid-template-columns: 100px 100px;
@@ -63,15 +59,29 @@
 
                     }
                 }
-                &::after{
-                    content: "";
-                    position: absolute;
-                    height: 100%;
-                    width: 2px;
-                    background-color: $third-color;
-                    right: 20%;
-                }
+                
             }
         }
     }
+    
+    @media (max-width:$md) {
+        .cont .lay{
+            flex-direction: column-reverse;
+            .line{
+                display: none;
+            }
+            .links{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
+                a{
+                    width: 25%;
+                    height: 100%;
+                }
+            }
+            
+        }
+    }
+    
 }

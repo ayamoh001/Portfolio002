@@ -1,11 +1,6 @@
 .blog{
-    background-color: $second-color;
     width: 100%;
     .cont{
-        max-width: $max-width;
-        width: 100%;
-        margin: 0 auto;
-        padding: 60px 0;
         .head{
             display: flex;
             justify-content: space-between;
@@ -33,6 +28,7 @@
             .one{
                 flex: 2;
                 & > div{
+                    overflow: hidden;
                     position: relative;
                     height: 100%;
                     width: 100%;
@@ -73,6 +69,7 @@
                             font-size: 45px;
                             color: $second-color;
                             margin-bottom: 10px;
+                            text-align: left;
                         }
                         p{
                             font-size: 22px;
@@ -88,6 +85,7 @@
                 flex-direction: column;
                 gap: 20px;
                 & > div{
+                    overflow: hidden;
                     position: relative;
                     height: 100%;
                     width: 100%;
@@ -127,9 +125,41 @@
                             font-size: 22px;
                             color: $second-color;
                             margin-bottom: 5px;
+                            text-align: left;
                         }
                     }
                 }
+            }
+        }
+    }
+    @media (max-width:$sm){
+        .cont .body{
+            flex-direction: column;
+            height: fit-content;
+            .two{
+                flex-direction: column;
+            }
+            .two>div,.one>div{
+                aspect-ratio: 1.5;
+                p{
+                    display: none;
+                }
+                .text {
+                    padding: 20px;
+                    h2{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (min-width:$sm) and (max-width:$md) {
+        .cont .body{
+            flex-direction: column;
+            height: 600px;
+            .two{
+                flex-direction: row;
             }
         }
     }
