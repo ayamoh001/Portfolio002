@@ -1,45 +1,13 @@
 .contact{
     width: 100%;
+    position: relative;
     .cont{
         
         & > div{
             display: flex;
             align-items: center;
             gap: 40px;
-            .form{
-                width: 100%;
-                form{
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                    input,textarea{
-                        background-color: $third-color;
-                        color: $second-color;
-                        border: none;
-                        border-radius: 5px;
-                        padding: 20px;
-                        height: 60px;
-                        font-size: 16px;
-                        &[type = "submit"]{
-                            background-color: $main-color;
-                            color: $second-color;
-                            border: none;
-                            border-radius: 5px;
-                            font-weight: bold;
-                            cursor: pointer;
-                            &:hover{
-                                background-color: $second-color;
-                                color:$main-color ; 
-                                outline: 1px solid $main-color;
-                            }
-                        }
-                    }
-                    textarea{
-                        height: 150px;
-                    }
-                }
-            }
+            
             .line{
                 width: 2px;
                 height: 300px;
@@ -60,6 +28,80 @@
                     }
                 }
                 
+            }
+            .form{
+                width: 100%;
+                form{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    input,textarea{
+                        background-color: $third-color;
+                        color: $second-color;
+                        border: none;
+                        border-radius: 5px;
+                        padding: 15px;
+                        height: 50px;
+                        font-size: 16px;
+                        &[type = "submit"]{
+                            background-color: $main-color;
+                            color: $second-color;
+                            border: none;
+                            border-radius: 5px;
+                            font-weight: bold;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: $second-color;
+                                color:$main-color ; 
+                                outline: 1px solid $main-color;
+                            }
+                        }
+                    }
+                    textarea{
+                        height: 150px;
+                    }
+                }
+                .modal{
+                    position: fixed;
+                    display: none;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: fit-content;
+                    width: 90%;
+                    box-shadow: 0 0 0 100vh rgb(0 0 0 / 50%);
+                    max-width: 500px;
+                    background-color: #edefec;
+                    color: #fff;
+                    padding: 30px;
+                    h3{
+                        font-size: 28px;
+                    }
+                    p{
+                        margin: 10px 0;
+                    }
+                    button{
+                        padding: 10px;
+                        background-color: $third-color;
+                        color: $second-color;
+                        border: none;
+                        font-size: 18px;
+                        width: 100%;
+                        font-weight: bold;
+                    }
+                    &.Success{
+                        background-color: darkturquoise;
+                    }
+                    &.Error{
+                        background-color: crimson;
+                    }
+                }
+                .show{
+                    display: block;
+                }
             }
         }
     }

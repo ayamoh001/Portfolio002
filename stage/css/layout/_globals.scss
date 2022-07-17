@@ -16,6 +16,7 @@ $third-color: #edefec;
 
 body{
     background-color: $second-color;
+    padding-top: 80px;
 }
 main{
     width: 100%;
@@ -63,6 +64,9 @@ $max-width-sm: $sm - 30;
 // adjusting the max width of the sections via breakpoints
 
 @media (max-width:$sm){
+    h2{
+        font-size: 35px;
+    }
     .cont{
         max-width: calc(100% - 30px);
         padding: 30px 0;
@@ -76,17 +80,11 @@ $max-width-sm: $sm - 30;
     }
 }
 
-@media (min-width:$md) and (max-width:$lg) {
-    .cont{
-        max-width: $max-width-md;
-        padding: 50px 0;
-    }
-}
 
-@media (min-width:$lg) and (max-width:$xlg) {
+@media (min-width:$md) and (max-width:$xlg) {
     .cont{
         max-width: $max-width-lg;
-        padding: 50px 0;
+        padding: 60px 0;
     }
 }
 

@@ -62,4 +62,9 @@
             flex-direction: column;
         }
     }
+    @media (max-width:$md) {
+        .cont .prices .price{
+            padding: 30px;
+        }
+    }
 }

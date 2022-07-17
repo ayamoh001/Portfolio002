@@ -83,7 +83,7 @@ gulp.task("watch", () => {
     gulp.watch("stage/html/**/*.pug", gulp.series("templates"));
     gulp.watch(["stage/css/**/*.css", "stage/css/**/*.scss"],gulp.series("css"));
     gulp.watch("stage/js/**/*.js", gulp.series("js"));
-    gulp.watch("stage/images/**/*.*", gulp.series("img"));
+    // gulp.watch("stage/images/**/*.*", gulp.series("img"));
     // gulp.watch("stage/**/*.*", gulp.series("deploy"));
 });
 

@@ -14,7 +14,6 @@
                     color: $third-color;
                     line-height: 35px;
                     font-size: 24px;
-                    
                     text-align: justify;
                 }
                 button{
@@ -40,8 +39,14 @@
     @media(max-width:$md) {
         .cont figure{
             flex-direction: column;
-            figcaption button{
-                width: 100%;
+            figcaption {
+                
+                line-height: 32px;
+                font-weight: 300;
+                font-size: 20px;
+                button{
+                    width: 100%;
+                }
             }
         }
     }
