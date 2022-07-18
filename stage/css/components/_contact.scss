@@ -64,10 +64,11 @@
                 }
                 .modal{
                     position: fixed;
-                    display: none;
+                    display: block;
                     top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
+                    left: 0;
+                    transform: translate(-50%,-50%) scale(0,1);
+                    transform-origin: left;
                     flex-direction: column;
                     justify-content: space-between;
                     height: fit-content;
@@ -100,7 +101,10 @@
                     }
                 }
                 .show{
-                    display: block;
+                    transform: translate(-50%,-50%) scale(1,1);
+                    transform-origin: left;
+                    left: 50%;
+                    transition: 1s;
                 }
             }
         }

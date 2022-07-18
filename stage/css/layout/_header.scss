@@ -115,6 +115,9 @@ header{
     }
     @media (max-width:$md){
         padding-bottom: 0;
+        .cont{
+            height: 70px;
+        }
         .cont > button{
             display: block;
         }
