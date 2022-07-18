@@ -18,9 +18,49 @@
                     justify-content: center;
                     border-radius: 50%;
                     flex-shrink: 0;
-
+                    position: relative;
+                    animation: around-rotate 12s cubic-bezier(0,0,0,0) infinite;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        transform: translateY(-50%);
+                        background: $second-color;
+                        height: 15px;
+                        width: 15px;
+                        border: 2px solid $main-color;
+                        border-radius: 50%;
+                    }
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        transform: translateY(50%);
+                        background: $second-color;
+                        height: 15px;
+                        width: 15px;
+                        border: 2px solid $main-color;
+                        border-radius: 50%;
+                    }
+                    
                     img{
-
+                        animation: around-rotate-rev 12s cubic-bezier(0,0,0,0) infinite;
+                    }
+                    @keyframes around-rotate {
+                        from{
+                            transform: rotate(0deg);
+                        }
+                        to{
+                            transform: rotate(360deg);
+                        }
+                    }
+                    @keyframes around-rotate-rev {
+                        from{
+                            transform: rotate(0deg);
+                        }
+                        to{
+                            transform: rotate(-360deg);
+                        }
                     }
                 }
                 .text{

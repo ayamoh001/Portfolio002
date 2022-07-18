@@ -73,7 +73,7 @@
                     justify-content: space-between;
                     height: fit-content;
                     width: 90%;
-                    box-shadow: 0 0 0 100vh rgb(0 0 0 / 50%);
+                    box-shadow: 0 0 0 max(100vw,100vh) rgb(0 0 0 / 50%);
                     max-width: 500px;
                     background-color: #edefec;
                     color: #fff;
